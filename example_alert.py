@@ -38,7 +38,7 @@ def check_anomaly(df, metric, threshold=0.3):
 
 def run_alerts(chat=None):
     chat_id = chat or 454623234
-    bot = telegram.Bot(token='1987162789:AAFgHNqBv-v5VXPQcS0btoxtXECUvw8akMs')
+    bot = telegram.Bot(token='TOKEN')
 
     # для удобства построения графиков в запрос можно добавить колонки date, hm
     data = Getch(''' SELECT
