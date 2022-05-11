@@ -28,7 +28,7 @@ def txt_cmpr(df, metric=None, col=None):
 def task_two(chat=None):
     #cht_id = chat or 517873898
     cht_id = chat or -1001539201117
-    bot = telegram.Bot(token='5161462233:AAHsaiNpJopThhUEugZI9ziKb-bgxBwTgzY')
+    bot = telegram.Bot(token='TOKEN')
     
     connection = {'host': 'https://clickhouse.lab.karpov.courses/',
     'database':'simulator_20220320',
