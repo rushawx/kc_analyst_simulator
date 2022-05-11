@@ -12,7 +12,7 @@ sns.set()
 def task_one(chat=None):
     #cht_id = chat or 517873898
     cht_id = chat or -1001539201117
-    bot = telegram.Bot(token='5161462233:AAHsaiNpJopThhUEugZI9ziKb-bgxBwTgzY')
+    bot = telegram.Bot(token='TOKEN')
 
     df = Getch('''
     SELECT toStartOfDay(toDateTime(time)) as date,
