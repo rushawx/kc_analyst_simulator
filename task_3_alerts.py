@@ -33,7 +33,7 @@ def check_anomaly(df, metric, n=4, a=5):
 def run_alerts(chat=None):
     # chat_id = chat or 517873898
     chat_id = chat or -1001706798154
-    bot = telegram.Bot(token='5161462233:AAHsaiNpJopThhUEugZI9ziKb-bgxBwTgzY')
+    bot = telegram.Bot(token='TOKEN')
 
     connection = {'host': 'https://clickhouse.lab.karpov.courses/',
     'database':'simulator_20220320',
