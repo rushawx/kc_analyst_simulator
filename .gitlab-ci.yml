@@ -1,0 +1,44 @@
+image: cr.yandex/crp742p3qacifd2hcon2/practice-da:latest
+
+stages:
+    - init
+    - run first
+    - run second
+    - run alerts
+
+say_hello:
+    stage: init
+    only:
+        - schedules
+    script:
+        - echo 'hello'
+
+reporting_task_1_job:
+    stage: run first
+    only:
+        refs:
+            - schedules
+        variables:
+            - $SCHEDULE_TYPE == "REPORTING"
+    script:
+        - python task_1.py
+
+reporting_task_2_job:
+    stage: run second
+    only:
+        refs:
+            - schedules
+        variables:
+            - $SCHEDULE_TYPE == "REPORTING"
+    script:
+        - python task_2.py
+
+alerting_task_3_job:
+    stage: run alerts
+    only:
+        refs:
+            - schedules
+        variables:
+            - $SCHEDULE_TYPE == "ALERTS"
+    script:
+        - python task_3_alerts.py
